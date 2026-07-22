@@ -3,124 +3,180 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Greeshma | UI Projects Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-.about {
-    max-width: 900px;
-    margin: 0 auto 30px;
-    text-align: center;
-    line-height: 1.6;
-}
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#0f172a;
-color:white;
-padding:40px;
+    background:#0f172a;
+    color:white;
+    padding:40px;
 }
 
 h1{
-text-align:center;
-font-size:42px;
-margin-bottom:10px;
+    text-align:center;
+    font-size:42px;
+    margin-bottom:10px;
 }
 
 .subtitle{
-text-align:center;
-color:#94a3b8;
-margin-bottom:50px;
+    text-align:center;
+    color:#94a3b8;
+    margin-bottom:40px;
 }
+
+.about{
+    max-width:900px;
+    margin:0 auto 50px;
+    text-align:center;
+    line-height:1.7;
+}
+
+.about h2{
+    margin-bottom:15px;
+}
+
+.about p{
+    color:#cbd5e1;
+}
+
+/* Projects */
 
 .projects{
 
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(320px,320px));
+    justify-content:center;
+    gap:30px;
 
 }
 
 .card{
 
-background:#1e293b;
-padding:25px;
-border-radius:18px;
-transition:.3s;
-box-shadow:0 15px 35px rgba(0,0,0,.25);
+    background:#1e293b;
+    border-radius:18px;
+    padding:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    transition:.3s;
+    display:flex;
+    flex-direction:column;
 
 }
 
 .card:hover{
 
-transform:translateY(-8px);
+    transform:translateY(-8px);
 
 }
 
 .card img{
 
-width:100%;
-border-radius:12px;
-margin-bottom:20px;
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:18px;
 
 }
 
 .card h2{
 
-margin-bottom:10px;
+    margin-bottom:12px;
+    font-size:24px;
 
 }
 
 .card p{
 
-color:#cbd5e1;
-margin-bottom:20px;
+    color:#cbd5e1;
+    line-height:1.6;
+    flex:1;
+    margin-bottom:20px;
 
 }
 
 .buttons{
 
-display:flex;
-gap:15px;
+    display:flex;
+    gap:12px;
 
 }
 
 .buttons a{
 
-flex:1;
-text-align:center;
-padding:12px;
-border-radius:10px;
-text-decoration:none;
-font-weight:600;
+    flex:1;
+    text-align:center;
+    padding:12px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
 
 }
 
 .demo{
 
-background:#38bdf8;
-color:white;
+    background:#38bdf8;
+    color:white;
+
+}
+
+.demo:hover{
+
+    background:#0ea5e9;
 
 }
 
 .github{
 
-background:#334155;
-color:white;
+    background:#334155;
+    color:white;
+
+}
+
+.github:hover{
+
+    background:#475569;
 
 }
 
 footer{
 
-text-align:center;
-margin-top:60px;
-color:#94a3b8;
+    text-align:center;
+    margin-top:60px;
+    color:#94a3b8;
+
+}
+
+@media(max-width:768px){
+
+body{
+
+padding:20px;
+
+}
+
+h1{
+
+font-size:32px;
+
+}
+
+.projects{
+
+grid-template-columns:1fr;
+
+}
 
 }
 
@@ -135,28 +191,33 @@ color:#94a3b8;
 <p class="subtitle">
 Frontend UI Projects built using HTML, CSS & JavaScript
 </p>
+
 <section class="about">
-    <h2>About</h2>
 
-    <p>
-        Hi, I'm <strong>Greeshma Balachandran</strong>, a Frontend Developer and Data Professional with a background in data analytics. I enjoy building responsive, interactive user interfaces using HTML, CSS, and JavaScript. This portfolio showcases personal frontend projects demonstrating reusable UI components, responsive design, and modern web interface development.
-    </p>
+<h2>About</h2>
 
-    
+<p>
+
+Hi, I'm <strong>Greeshma Balachandran</strong>, a Frontend Developer and Data Professional with a background in Data Analytics. I enjoy building responsive and interactive web interfaces using HTML, CSS and JavaScript. This portfolio showcases projects demonstrating reusable UI components, responsive layouts and modern frontend development practices.
+
+</p>
 
 </section>
 
 <div class="projects">
 
+<!-- Admin Dashboard -->
+
 <div class="card">
 
-<img src="assets/admin-dashboard.png">
+<img src="assets/admin-dashboard.png" alt="Admin Dashboard">
 
 <h2>Admin Dashboard</h2>
 
 <p>
-Responsive Admin Dashboard with Dark Mode,
-Charts, Sidebar and Mobile Navigation.
+
+Responsive Admin Dashboard featuring analytics cards, charts, sidebar navigation and dark mode.
+
 </p>
 
 <div class="buttons">
@@ -181,15 +242,18 @@ GitHub
 
 </div>
 
+<!-- Game UI -->
+
 <div class="card">
 
-<img src="assets/game-ui-library.png">
+<img src="assets/game-ui-library.png" alt="Game UI Library">
 
 <h2>Game UI Library</h2>
 
 <p>
-Modern Game UI Components with buttons,
-cards, progress bars and HUD.
+
+Collection of reusable game interface components including buttons, HUD elements, progress bars and cards.
+
 </p>
 
 <div class="buttons">
@@ -203,7 +267,7 @@ Live Demo
 </a>
 
 <a class="github"
-href=" https://github.com/greeshmabal92-a11y/game-ui-library"
+href="https://github.com/greeshmabal92-a11y/game-ui-library"
 target="_blank">
 
 GitHub
@@ -214,14 +278,18 @@ GitHub
 
 </div>
 
+<!-- Game Menu -->
+
 <div class="card">
 
-<img src="assets/game-main-menu.png">
+<img src="assets/game-main-menu.png" alt="Game Main Menu">
 
 <h2>Game Main Menu</h2>
 
 <p>
-Responsive futuristic game menu interface.
+
+Responsive futuristic game menu interface featuring interactive navigation and modern visual design.
+
 </p>
 
 <div class="buttons">
@@ -235,7 +303,7 @@ Live Demo
 </a>
 
 <a class="github"
-href=" https://github.com/greeshmabal92-a11y/game-main-menu"
+href="https://github.com/greeshmabal92-a11y/game-main-menu"
 target="_blank">
 
 GitHub
@@ -246,15 +314,18 @@ GitHub
 
 </div>
 
+<!-- Game HUD -->
+
 <div class="card">
 
-<img src="assets/game-hud.png">
+<img src="assets/game-hud.png" alt="Game HUD">
 
 <h2>Game HUD</h2>
 
 <p>
-Game Heads-Up Display with inventory,
-health bar and mini map.
+
+Game Heads-Up Display with inventory, health bar, mini map and player status indicators.
+
 </p>
 
 <div class="buttons">
@@ -279,6 +350,7 @@ GitHub
 
 </div>
 
+<!-- Healthcare Patient Portal -->
 
 <div class="card">
 
@@ -287,7 +359,9 @@ GitHub
 <h2>Healthcare Patient Portal</h2>
 
 <p>
-Responsive Healthcare Patient Portal built with HTML, CSS and JavaScript featuring appointment management, profile management, search functionality and localStorage.
+
+Responsive Healthcare Patient Portal allowing users to book, reschedule, search and cancel appointments, manage profiles, view medical records, lab results and prescriptions with browser localStorage support.
+
 </p>
 
 <div class="buttons">
@@ -311,6 +385,7 @@ GitHub
 </div>
 
 </div>
+
 </div>
 
 <footer>
